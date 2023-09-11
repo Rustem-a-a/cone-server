@@ -1,10 +1,12 @@
-import express from 'express';
-import cors from 'cors';
-import 'dotenv/config';
+import express from 'express'
+import cors from 'cors'
+import coordinatesRouter from "./routes/coordinatesRouter.js";
+import 'dotenv/config'
 
-const app =express();
+const app= express();
 app.use(express.json());
 app.use(cors());
+app.use('/',coordinatesRouter);
 const PORT = process.env.PORT || 5000;
 const start = async()=>{
     try{
