@@ -6,10 +6,10 @@ import 'dotenv/config'
 const app= express();
 app.use(express.json());
 app.use(cors(
-    {
-        credentials:true,
-        origin:  process.env.URL_FRONT
-    }
+    // {
+    //     credentials:true,
+    //     origin:  process.env.URL_FRONT
+    // }
 ));
 app.use('/',coordinatesRouter);
 const PORT = process.env.PORT || 5000;
